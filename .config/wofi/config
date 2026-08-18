@@ -1,0 +1,5 @@
+# wofi config
+
+stylesheet=style.css
+width=750
+height=400
