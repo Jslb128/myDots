@@ -26,7 +26,6 @@ include /etc/sway/config-vars.d/*
 #load lxpolit for authentication agent
 exec lxpolit
 seat seat0 xcursor_theme Adwaita 32
-#output eDP-1 scale 1
 
 
 ### Output configuration
@@ -259,18 +258,18 @@ bar {
 #
 # Theme
 #
-default_border  pixel 3
-gaps    outer       3px
-gaps    inner       3px
+default_border  pixel 2
+gaps    outer       2px
+gaps    inner       2px
 
 # class                    border         bground       text          indicator     child_border
 client.focused             #babbf1      #babbf1     #303446     #ca9ee6     #babbf1
 client.unfocused           #626880      #626880     #c6d0f5     #737994     #626880
 client.focused_inactive    #737994      #737994     #c6d0f5     #737994     #737994
 
-set $seethrough 0.95
+# set $seethrough 0.96
 # Transparency
-for_window [class=".*"] opacity $seethrough
-for_window [app_id=".*"] opacity $seethrough
+# for_window [class=".*"] opacity $seethrough
+# for_window [app_id=".*"] opacity $seethrough
 
 include /etc/sway/config.d/*
