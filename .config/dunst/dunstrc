@@ -1,0 +1,21 @@
+[global]
+font = JetBrains Mono NL 16
+foreground = "#c6d0f5"
+background = "#303446"
+frame_color = "#e78284"
+
+width = (250, 250)
+height = (30, 30)
+offset = "10x10"
+origin = "top-center"
+
+icon_path = "/usr/share/icons/default/index.theme:/usr/share/pixmaps"
+ 
+[urgency_low]
+timeout = 10
+ 
+[urgency_normal]
+timeout = 20
+ 
+[urgency_critical]
+timeout = 0
