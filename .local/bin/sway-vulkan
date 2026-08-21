@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# put sway-vulkan.desktop with Exec
+# to this file in
+# /usr/share/wayland-sessions/
+# to get session entry in gdm
+
+export WLR_RENDERER=vulkan
+exec sway "$@"

@@ -36,10 +36,9 @@ include /etc/sway/config-vars.d/*
 exec lxpolkit
 seat seat0 xcursor_theme Adwaita 32
 
-
 ### Output configuration
 # Default wallpaper
-output * bg /usr/share/backgrounds/wallhaven-yqxzqx_1920x1200.png center
+output * bg /usr/share/backgrounds/osselo-Ask_a_friend.jpg fill
 
 #
 # Example configuration:
