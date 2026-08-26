@@ -38,7 +38,7 @@ seat seat0 xcursor_theme Adwaita 32
 
 ### Output configuration
 # Default wallpaper
-output * bg /usr/share/backgrounds/osselo-Ask_a_friend.jpg fill
+output * bg /usr/share/backgrounds/wallhaven-9o53z1_1920x1200.png fill
 
 #
 # Example configuration:
@@ -51,10 +51,10 @@ output * bg /usr/share/backgrounds/osselo-Ask_a_friend.jpg fill
 #
 # Example configuration:
 #
-#exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+        timeout 300 'swaylock -f -c 000000' \
+        timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+        before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -67,6 +67,7 @@ output * bg /usr/share/backgrounds/osselo-Ask_a_friend.jpg fill
        tap enabled
        natural_scroll enabled
        middle_emulation enabled
+       scroll_method two_finger
        accel_profile "flat"
        pointer_accel 0.5
        scroll_factor 0.4
@@ -244,40 +245,51 @@ bindsym $mod+r mode "resize"
 
 bar {
     position top
-    separator_symbol | 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
 
     status_command while ~/.config/sway/status.sh; do sleep 1; done
-    pango_markup yes
-
     colors {
-        statusline #c6d0f5
-        background #303446
+        statusline #d8dee9
+        background #070707
         # class            border     bground   text
-        inactive_workspace #414559  #414559 #c6d0f5
-        focused_workspace  #babbf1  #babbf1 #303446
-        active_workspace   #babbf1  #babbf1 #303446
+        inactive_workspace #070707  #070707 #eceff4
+        focused_workspace  #eceff4  #eceff4 #070707
+        active_workspace   #eceff4  #eceff4 #070707
 
     }
+
     font pango:JetBrains Mono NL 16
 }    
 
 #
 # Theme
 #
+# #3b4252
+# #bf616a
+# #a3be8c
+# #ebcb8b
+# #81a1c1
+# #b48ead
+# #88c0d0
+# #e5e9f0
+# #596377
+# #bf616a
+#text= #d8dee9
+#base= #070707
+
 default_border  pixel 2
-gaps    outer       2px
-gaps    inner       2px
+gaps    outer       3px
+gaps    inner       3px
 
 # class                    border         bground       text          indicator     child_border
-client.focused             #babbf1      #babbf1     #303446     #ca9ee6     #babbf1
-client.unfocused           #626880      #626880     #c6d0f5     #737994     #626880
-client.focused_inactive    #737994      #737994     #c6d0f5     #737994     #737994
+client.focused             #eceff4      #eceff4     #070707     #81a1c1     #eceff4
+client.unfocused           #3b4252      #3b4252     #d8dee9     #596377     #3b4252
+client.focused_inactive    #596377      #596377     #d8dee9     #596377     #596377
 
-# set $seethrough 0.96
+#set $seethrough 0.97
 # Transparency
-# for_window [class=".*"] opacity $seethrough
-# for_window [app_id=".*"] opacity $seethrough
+#for_window [class=".*"] opacity $seethrough
+#for_window [app_id=".*"] opacity $seethrough
 
 include /etc/sway/config.d/*

@@ -1,3 +1,4 @@
 font-family = Jetbrains Mono NL
 font-size = 16
-theme = catppuccin-frappe.conf
+theme = Nord
+background = 070707
