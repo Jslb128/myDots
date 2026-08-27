@@ -2,3 +2,5 @@ font-family = Jetbrains Mono NL
 font-size = 16
 theme = Nord
 background = 070707
+background-opacity = 0.97
+background-blur = true
