@@ -33,7 +33,7 @@ include /etc/sway/config-vars.d/*
 
 ### Startup
 #load lxpolit for authentication agent
-exec lxpolkit
+#exec lxpolkit
 seat seat0 xcursor_theme Adwaita 32
 
 ### Output configuration
@@ -239,6 +239,7 @@ bindsym $mod+r mode "resize"
     bindsym Print exec grim 
 # Take screenshots:
     bindsym $mod+Shift+s exec grim -g "$(slurp)"
+
 #
 # Status Bar:
 #
@@ -250,6 +251,7 @@ bar {
 
     swaybar_command waybar
 }    
+ for_window [app_id="org.prismlauncher.PrismLauncher"] floating enable 
 
 #
 # Theme
@@ -276,7 +278,7 @@ client.focused             #eceff4      #eceff4     #070707     #81a1c1     #ece
 client.unfocused           #3b4252      #3b4252     #d8dee9     #596377     #3b4252
 client.focused_inactive    #596377      #596377     #d8dee9     #596377     #596377
 client.urgent              #bf616a      #bf616a     #070707     #bf616a     #bf616a
-set $seethrough 0.97
+set $seethrough 0.96
 # Transparency
 #for_window [class=".*"] opacity $seethrough
 for_window [app_id="code"] opacity $seethrough
