@@ -1,0 +1,11 @@
+ignore-empty-password
+font=Jetbrains Mono NL
+
+indicator-radius=86
+indicator-thickness=12
+
+indicator-caps-lock
+indicator-idle-visible
+
+separator-color=00000000
+image=/usr/share/backgrounds/wallhaven-9o53z1_1920x1200.png
