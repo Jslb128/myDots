@@ -3,7 +3,7 @@
 export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
 
-Ulimit=84
+Ulimit=82
 Llimit=24
 bat=$(acpi -b | awk '{print $4}' | tr -d '%,')
 bat_status=$(acpi -b |  awk '{print $3}' | tr -d ',')

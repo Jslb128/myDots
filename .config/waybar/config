@@ -8,6 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
+        "tray",
         "sway/mode",
         "sway/scratchpad",
         "custom/media"
@@ -17,14 +18,13 @@
     ],
     "modules-right": [
         "mpd",
+        "power-profiles-daemon",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
         "backlight",
         "battery",
         "battery#bat2",
         "clock",
-        "tray",
         "custom/power"
     ],
     // Modules configuration
@@ -103,7 +103,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% ☀"
+        "format": "☀ {percent}%"
         // "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -112,11 +112,11 @@
             "warning": 25,
             "critical": 20
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% {icon}~",
-        "format-plugged": "{capacity}% {icon}~",
-        "format-alt": "{time} {icon}",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}% ",
+        "format-charging": "+{icon} {capacity}%",
+        "format-plugged": "+{icon} {capacity}%",
+        "format-alt": "{icon} {time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
@@ -137,20 +137,20 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -160,8 +160,7 @@
             "portable": "",
             "car": "",
             "default": ["", "", ""]
-        },
-        "on-click": "$HOME/.config/waybar/switchSink.sh"
+        }
     },
     "custom/media": {
         "format": "{icon} {text}",

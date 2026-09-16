@@ -9,7 +9,7 @@ window#waybar {
     background-color: rgba(7, 7, 7, 0.5);
     /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
     color: #d8dee9;
-    border: 0.5px solid #d8dee9;
+    border: 1px solid #d8dee9;
     /*border-radius: 4;*/
     transition-property: background-color;
     transition-duration: .5s;
@@ -188,7 +188,7 @@ label:focus {
 }
 
 #network {
-    color: #88c0d0;
+    color: #d8dee9;
 }
 
 #network.disconnected {
@@ -196,7 +196,7 @@ label:focus {
 }
 
 #pulseaudio {
-    color: #ebcb8b;
+    color: #d8dee9;
 }
 
 #pulseaudio.muted {

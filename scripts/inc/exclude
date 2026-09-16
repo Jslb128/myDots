@@ -10,7 +10,8 @@
 !.config/
 !.bash_aliases
 !scripts/
-!scripts/**
+!scripts/inc/
+!scripts/inc/**
 
 !.config/sway/
 !.config/sway/**
