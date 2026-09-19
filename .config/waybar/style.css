@@ -2,7 +2,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: JetBrains Mono NL, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 20px;
-    border-radius: 2pt;
+    /* border-radius: 2pt; */
 }
 
 window#waybar {

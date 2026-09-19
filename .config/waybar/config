@@ -16,9 +16,8 @@
     "modules-center": [
         "sway/window"
     ],
-    "modules-right": [
+   "modules-right": [
         "mpd",
-        "power-profiles-daemon",
         "pulseaudio",
         "network",
         "backlight",
