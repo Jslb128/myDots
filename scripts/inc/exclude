@@ -31,6 +31,9 @@
 !.config/ghostty/
 !.config/ghostty/**
 
+!.config/nvim/
+!.config/nvim/**
+
 !.local/
 !.local/bin/
 !.local/bin/**
