@@ -2,7 +2,7 @@
 font = JetBrains Mono NL 16
 foreground = "#d8dee9"
 background = "#070707"
-frame_color = "#bf616a"
+frame_color = "#d8dee9"
 
 width = (250, 500)
 height = (30, 250)
